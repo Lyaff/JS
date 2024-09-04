@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiendita Dulce Creación</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Dulce Creación</h1>
+        <h2>¡Tartas, cupcakes y galletas personalizadas!</h2>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Inicio</a>
+        <a class="nav-link" href="#products">Productos</a>
+        <a class="nav-link" href="#contact">Contacto</a>
+    </nav>
+
+    <div class="container mt-5" id="products">
+        <h2>Productos</h2>
+        <div class="row" id="product-list">
+            <!-- Los productos se añadirán aquí por JavaScript -->
+        </div>
+    </div>
+
+    <div class="container mt-5" id="cart">
+        <h2>Carrito de Compras</h2>
+        <div id="cart-details">
+            <ul id="cart-items" class="list-group">
+                <!-- Los ítems del carrito se añadirán aquí por JavaScript -->
+            </ul>
+            <input type="text" id="coupon-code" class="form-control mb-2" placeholder="Código de descuento">
+            <button class="btn btn-secondary mb-3" onclick="applyCoupon()">Aplicar Cupón</button>
+            <h4>Total: $<span id="total-price">0.00</span></h4>
+            <button class="btn btn-primary" id="checkout-btn">Comprar</button>
+        </div>
+    </div>
+    
+
+    <footer class="footer mt-5" id="contact">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>¿Tienes alguna pregunta o necesitas más información? No dudes en contactarnos:</p>
+            <p>Email: <a href="mailto:fieralucy@gmail.com">fieralucy@gmail.com</a></p>
+            <p>Teléfono: +34 677241335</p>
+            <p>Dirección: Calle Ramón Azorín 38</p>
+        </div>
+    </footer>
+
+    <!-- Vincula el archivo index.js -->
+    <script src="index.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
+</body>
+</html>
