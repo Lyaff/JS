@@ -12,7 +12,12 @@
         <h1>Dulce Creación</h1>
         <h2>¡Tartas, cupcakes y galletas personalizadas!</h2>
     </header>
-
+    
+    <button id="toggle-theme" class="theme-toggle-btn">
+        <span class="toggle-icon"></span>
+        <span class="toggle-text">Modo Oscuro</span>
+    </button>
+    
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Inicio</a>
         <a class="nav-link" href="#products">Productos</a>
@@ -35,10 +40,9 @@
             <input type="text" id="coupon-code" class="form-control mb-2" placeholder="Código de descuento">
             <button class="btn btn-secondary mb-3" onclick="applyCoupon()">Aplicar Cupón</button>
             <h4>Total: $<span id="total-price">0.00</span></h4>
-            <button class="btn btn-primary" id="checkout-btn">Comprar</button>
+            <a class="btn btn-primary" id="checkout-btn" href="checkout.html">Ir a Pagar</a>
         </div>
     </div>
-    
 
     <footer class="footer mt-5" id="contact">
         <div class="container">
@@ -50,13 +54,9 @@
         </div>
     </footer>
 
-    <!-- Vincula el archivo index.js -->
     <script src="index.js"></script>
-    <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    
 </body>
 </html>

@@ -1,4 +1,6 @@
-/* Estilos Generales */
+
+
+/* Estilos generales */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f9f9f9;
@@ -7,7 +9,7 @@ body {
     padding: 0;
 }
 
-/* Header */
+/* Estilos para el header */
 .header {
     background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
     color: white;
@@ -72,6 +74,11 @@ body {
     height: 200px;
     object-fit: cover;
     border-radius: 12px 12px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.card-img-top:hover {
+    transform: scale(1.1); /* Zoom al hacer hover */
 }
 
 .card-body {
@@ -139,7 +146,7 @@ body {
 }
 
 #checkout-btn:hover {
-    background-color: #ff9a9e;
+    background-color: #ff6f61;
 }
 
 /* Estilos para la sección de contacto */
@@ -166,6 +173,59 @@ body {
 
 .footer a:hover {
     color: #ffe6e6;
+}
+
+/* Botón de alternancia de temas */
+.theme-toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #ff9a9e;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    background-color: #ff6f61;
+}
+
+.toggle-icon {
+    width: 24px;
+    height: 24px;
+    background-image: url('sun-icon.svg'); /* Usa íconos que representen el sol y la luna */
+    background-size: cover;
+    margin-right: 10px;
+    transition: background-image 0.3s ease;
+}
+
+body[data-theme='dark'] .theme-toggle-btn {
+    background-color: #333;
+}
+
+body[data-theme='dark'] .theme-toggle-btn:hover {
+    background-color: #555;
+}
+
+body[data-theme='dark'] .toggle-icon {
+    background-image: url('moon-icon.svg');
+}
+
+body[data-theme='dark'] .toggle-text {
+    color: #ff9a9e;
+}
+
+/* Modo oscuro */
+body[data-theme='dark'] {
+    background-color: #1e1e1e;
+    color: #030000;
 }
 
 /* Media Queries */

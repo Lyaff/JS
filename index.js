@@ -102,11 +102,11 @@ function removeFromCart(productId) {
 // Función para manejar la compra
 document.getElementById('checkout-btn').addEventListener('click', () => {
     if (cart.length === 0) {
-        alert("Tu carrito está vacío.");
+        alert("Tu carrito se vaciará.");
         return;
     }
 
-    alert(`Gracias por tu compra. El total es $${document.getElementById('total-price').textContent}.`);
+    alert(`El total es $${document.getElementById('total-price').textContent}.`);
     cart = [];
     updateCart();
 });
@@ -161,6 +161,22 @@ document.getElementById('checkout-btn').addEventListener('click', () => {
         alert('Tu carrito está vacío.');
     }
 });
+document.getElementById('toggle-theme').addEventListener('click', () => {
+    const bodyElement = document.body;
+    const currentTheme = bodyElement.getAttribute('data-theme');
+    const toggleButtonText = document.querySelector('.toggle-text');
+
+    if (currentTheme === 'dark') {
+        bodyElement.removeAttribute('data-theme');
+        toggleButtonText.textContent = 'Modo Oscuro';
+    } else {
+        bodyElement.setAttribute('data-theme', 'dark');
+        toggleButtonText.textContent = 'Modo Claro';
+    }
+});
+
+
 
 // Inicializar la tienda al cargar la página
 document.addEventListener('DOMContentLoaded', displayProducts);
+
